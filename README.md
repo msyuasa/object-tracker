@@ -61,3 +61,18 @@ __NOTE__ -- If you want to do multi object tracking code, use the file `object-t
 ## How to perform tracking
 
 Once the code starts, it will start the video file or the live stream. To select the objects to be tracked, pause the video by pressing the <kbd>p</kbd> key.The next step is to create a bounding box around the object(s) to be tracked. Press the mouse to select the top-left pixel location of the object to be tracked and then release the mouse on the bottom-right location of the object to be tracked. Once, this is done press <kbd>p</kbd> to start the tracking. Also, if you want to discard the object, press the <kbd>d</kbd> key. In SINGLE OBJECT TRACKING MODE, you can only select one object but in MULTI OBJECT TRACKING MODE, you can select as many objects you want but at the cost of speed. Press <kbd>esc</kbd> anytime to gracefully quit the code.
+
+## セットアップ
+
+```
+GLib-GIO-Message: Using the 'memory' GSettings backend.  Your settings will not be saved or shared with other applications.
+```
+
+- 上記のメッセージが出たら```export GIO_EXTRA_MODULES=/usr/lib/x86_64-linux-gnu/gio/modules/``` => 再ロード
+- [GLib-GIO-Message: Using the 'memory' GSettings backend. Your settings will not be saved or shared with other applications](https://stackoverflow.com/questions/44934641/glib-gio-message-using-the-memory-gsettings-backend-your-settings-will-not-b)
+- [GLib-GIO message pops up when using matplotlib](https://github.com/conda-forge/glib-feedstock/issues/19)
+
+## 操作
+- pを押下して画面止める
+- 画面が2つになるので、対象をドラッグで選択
+- pを押下して再開

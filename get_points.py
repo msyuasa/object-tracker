@@ -18,10 +18,10 @@ def run(im, multi=False):
 
     def callback(event, x, y, flags, param):
         if event == cv2.EVENT_LBUTTONDOWN:
-	    if multi == False and len(pts_2) == 1:
-		print("WARN: Cannot select another object in SINGLE OBJECT TRACKING MODE.")
-		print("Delete the previously selected object using key `d` to mark a new location.")
-		return
+        if multi == False and len(pts_2) == 1:
+        print("WARN: Cannot select another object in SINGLE OBJECT TRACKING MODE.")
+        print("Delete the previously selected object using key `d` to mark a new location.")
+        return None
             run.mouse_down = True
             pts_1.append((x, y))
         elif event == cv2.EVENT_LBUTTONUP and run.mouse_down == True:
